@@ -55,6 +55,17 @@
     h2 { font-size: 1.6rem; margin: 0 0 24px; }
     h3 { margin: 0 0 4px; }
 
+    .about-wrap { display: flex; align-items: center; gap: 32px; }
+    .headshot {
+      width: 180px; height: 180px; flex-shrink: 0;
+      border-radius: 50%; object-fit: cover;
+      border: 3px solid var(--accent);
+      background: var(--card);
+    }
+    @media (max-width: 600px) {
+      .about-wrap { flex-direction: column-reverse; align-items: flex-start; gap: 20px; }
+      .headshot { width: 140px; height: 140px; }
+    }
     #about p.lead { font-size: 1.2rem; color: var(--muted); max-width: 660px; margin: 0 0 12px; }
     #about p.edu { font-size: .95rem; color: var(--muted); margin: 0; }
 
@@ -102,11 +113,16 @@
 
   <!-- 1. PERSONAL STATEMENT -->
   <section id="about">
-    <h1>Hi, I'm Marie Hong.</h1>
-    <p class="lead">
-      I'm a Data Science and Supply Chain Management student who turns complex IT and business data into clear recommendations for non-technical stakeholders.
-    </p>
-    <p class="edu">Rutgers University Honors College, B.A. Data Science &amp; B.S. Supply Chain Management, GPA 3.8/4.0, graduating May 2028.</p>
+    <div class="about-wrap">
+      <div>
+        <h1>Hi, I'm Marie Hong.</h1>
+        <p class="lead">
+          I'm a Data Science and Supply Chain Management student who turns complex IT and business data into clear recommendations for non-technical stakeholders.
+        </p>
+        <p class="edu">Rutgers University Honors College, B.A. Data Science &amp; B.S. Supply Chain Management, GPA 3.8/4.0, graduating May 2028.</p>
+      </div>
+      <img class="headshot" src="headshot.jpg" alt="Headshot of Marie Hong" width="180" height="180">
+    </div>
   </section>
 
   <!-- 2. SKILLS -->
